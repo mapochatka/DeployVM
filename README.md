@@ -1,0 +1,2 @@
+# DeployVM
+SCCM deployment script
