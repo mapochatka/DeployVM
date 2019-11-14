@@ -1,0 +1,22 @@
+
+#Beginning - Copy and paste this into a notepad/PowerShell script compiler and save as a .ps1 file
+
+[int]$VMcount = Read-host “Input Number of VMs”
+$VMTemplate = Read-host "Input VMTemplate Name"
+$VMName = Read-host “Input Base Name”
+$VMHost = Read-host "Input Host Name"
+$VMPath = Read-host "Input VM Path (example: C:\Clusterstorage\Volume1)"
+
+$Total = 1
+
+While ($total -le $VMCount) {$NewVMName = “$VMName-” + $total
+
+Write-Output $virtualMachineConfiguration
+
+New-SCVirtualMachine -Name $NewVMName -VMHost "$VMHost" -path "$VMPath" -VMTemplate "$VMTemplate" -ReturnImmediately -DelayStartSeconds “0"
+
+$Total++
+
+}
+
+#End
